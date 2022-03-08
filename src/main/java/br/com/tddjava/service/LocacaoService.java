@@ -12,10 +12,6 @@ public class LocacaoService {
 
     public Locacao alugarFilme(Usuario usuario, Filme filme) throws Exception {
 
-        if (filme.getEstoque() == 0) {
-            throw new Exception("Estoque do filme está vazio");
-        }
-
         Locacao locacao = new Locacao();
         locacao.setFilme(filme);
         locacao.setUsuario(usuario);
